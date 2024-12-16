@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>리다이렉팅...</title>
+    <script>
+      const l = window.location;
+      const path = l.pathname;
+
+      // video, team 등의 경로를 체크
+      if (path.match(/^\/2024\/(video|team|gallery|department|location)/)) {
+        window.location.href = "/2024/multi/";
+      }
+    </script>
+  </head>
+  <body>
+    잠시만 기다려주세요...
+  </body>
+</html>

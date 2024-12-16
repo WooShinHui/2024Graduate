@@ -1,0 +1,493 @@
+.department-title {
+  width: 100%;
+  height: 300px; /* 400px에서 300px로 수정 */
+  border: 1px solid #ddd;
+  margin-bottom: 24px;
+}
+
+.department-title img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.department-container {
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+  background-color: #000;
+  overflow: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  box-sizing: border-box;
+}
+.department-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.department-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+.department-Media-content-type {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3등분 */
+  gap: 20px;
+  width: 100%; /* 전체 너비 사용 */
+}
+.department-Media-content-type-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  height: 20%;
+  border-radius: 6px;
+  margin-top: 36px;
+  border: 1px solid #929292;
+  background-color: #000000;
+}
+.department-Media-content-type-item p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+/* 기존 스타일 유지하되 transform-origin 제거 */
+.department-Media-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.department-Media-title-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.department-Media-title-text::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgb(215, 255, 243) 0%,
+    #80ecd1 20%,
+    #01daa2 100%
+  );
+  opacity: 0.6;
+  border-radius: 50%;
+  left: -16px;
+  top: 6px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.department-Media-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background-color: #01daa2;
+}
+
+.department-Media {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-bottom: 32px;
+  gap: 32px;
+  width: 100%;
+}
+
+.department-Media-title p {
+  margin-top: 12px;
+  font-size: 16px;
+  font-family: "Pretendard";
+}
+
+.department-Media-description-text {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.department-Media-description p {
+  font-family: "Pretendard";
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+.department-Media-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.department-Media-content img {
+  width: 100%;
+  height: 100%;
+}
+
+.department-Media-content-edu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-edu {
+  margin-top: px;
+  width: 100%;
+}
+
+/* edu 아이템 영역 수정 */
+.edu-item {
+  display: flex;
+  align-items: center;
+  gap: 6rem; /* 이미지와 텍스트 사이 간격 증가 */
+  margin-bottom: 1rem; /* 아이템 간 간격 증가 */
+  width: 100%;
+}
+
+.edu-item.reverse {
+  flex-direction: row-reverse;
+  white-space: nowrap;
+  gap: 60px;
+}
+
+/* 이미지 크기 조절 */
+.edu-image {
+  flex: 1;
+}
+
+.edu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.edu-text {
+  flex: 1;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+.edu-text h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #000000;
+  background-color: #01daa2;
+  display: inline-block;
+  padding: 0 8px;
+}
+
+.edu-text p {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Pretendard";
+  margin-bottom: 12px;
+  font-size: 24px;
+}
+
+.edu-text p:last-child {
+  margin-bottom: 0;
+}
+
+.edu-descriptions {
+  margin-top: 20px;
+}
+
+.professor-card {
+  width: 400px; /* 카드 크기 고정 */
+  height: 500px;
+}
+.professor-card:hover {
+  transform: translateY(-5px);
+}
+
+.professor-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.professor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.professor-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.professor-position {
+  font-size: 16px;
+  color: #01daa2;
+  margin-bottom: 8px;
+}
+
+.professor-field {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.professor-email {
+  font-size: 14px;
+  color: #888;
+}
+
+/* 태블릿 (1024px 이하) */
+@media screen and (max-width: 1024px) {
+  .department-container {
+    box-sizing: border-box;
+    padding: 20px 30px;
+  }
+
+  .department-title {
+    height: 250px;
+  }
+
+  .department-Media-title-text {
+    font-size: 28px;
+  }
+
+  .department-Media-description-text {
+    font-size: 22px;
+  }
+  .department-Media-content-type-item p {
+    font-size: 16px;
+    font-weight: 700;
+    word-break: keep-all;
+    text-align: center;
+  }
+  .edu-item {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .edu-text h3 {
+    font-size: 26px;
+  }
+
+  .edu-text p {
+    font-size: 15px;
+  }
+
+  .department-Media-Professor-title-text {
+    font-size: 28px;
+  }
+  .professor-list {
+    grid-template-columns: repeat(3, 1fr); /* 태블릿에서는 3개씩 */
+  }
+  .professor-card {
+    min-width: calc(50% - 15px); /* 2등분하고 gap 고려 */
+    max-width: calc(50% - 15px);
+  }
+
+  .professors-grid {
+    max-width: none;
+    margin: 0;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .professors-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .professors-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .professor-card {
+    flex: 0 0 auto;
+    min-width: 300px;
+    max-width: 300px;
+  }
+}
+
+/* 모바일 (768px 이하) */
+@media screen and (max-width: 768px) {
+  .department-container {
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .department-title {
+    height: 200px;
+    margin-bottom: 16px;
+  }
+
+  .department-Media {
+    gap: 24px;
+  }
+
+  .department-Media-title-text {
+    font-size: 24px;
+  }
+
+  .department-Media-title p {
+    font-size: 14px;
+  }
+
+  .department-Media-description-text {
+    font-size: 20px;
+  }
+
+  .department-Media-description p {
+    font-size: 14px;
+  }
+
+  .edu-item,
+  .edu-item.reverse {
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .edu-image,
+  .edu-text {
+    padding-right: 0;
+  }
+
+  .edu-text h3 {
+    font-size: 22px;
+  }
+
+  .edu-text p {
+    font-size: 14px;
+  }
+
+  .edu-text-second {
+    margin-left: 0;
+  }
+
+  .department-Media-Professor-title {
+    margin-top: 30px;
+  }
+
+  .department-Media-Professor-title-text {
+    font-size: 24px;
+  }
+
+  .department-Media-Professor-title p {
+    font-size: 14px;
+  }
+
+  /* 원형 배경 크기 조절 */
+  .department-Media-title-text::before,
+  .department-Media-Professor-title-text::before {
+    width: 32px;
+    height: 32px;
+    left: -12px;
+    top: 4px;
+  }
+
+  /* 밑줄 길이 조절 */
+  .department-Media-title::after,
+  .department-Media-Professor-title::after {
+    width: 80px;
+  }
+  .professor-list {
+    grid-template-columns: repeat(2, 1fr); /* 모바일에서는 2개씩 */
+  }
+
+  .professor-card {
+    width: calc(50% - 8px);
+  }
+
+  .professor-image {
+    height: 220px;
+  }
+
+  .professor-info h3 {
+    font-size: 18px;
+  }
+
+  .professor-position {
+    font-size: 14px;
+  }
+
+  .professor-field,
+  .professor-email {
+    font-size: 12px;
+  }
+  .professor-card {
+    min-width: 100%; /* 1열로 */
+    max-width: 100%;
+  }
+}
+
+.department-Media-Professor-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.department-Media-Professor-title-text {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.department-Media-Professor-title-text::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(1, 218, 162, 1);
+  border-radius: 50%;
+  left: -16px;
+  top: 6px;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.department-Media-Professor-title::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100px;
+  height: 1px;
+  background-color: #01daa2;
+}
+.professors-section {
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 0px 20px;
+  overflow-x: scroll;
+  overflow-y: visible;
+  min-height: 830px; /* professors-grid 높이만큼 최소 높이 확보 */
+  box-sizing: border-box;
+}
+
+.professors-grid {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  padding: 20px 20px 0px 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 30px;
+  width: max-content;
+}

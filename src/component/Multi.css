@@ -1,0 +1,260 @@
+.content-wrapper {
+  padding: 20px;
+}
+
+.content-title {
+  display: inline-block; /* 텍스트 길이만큼만 배경색 적용 */
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #01daa2;
+  padding: 4px 8px;
+}
+
+/* ... 나머지 스타일 유지 ... */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12px;
+}
+.section-header {
+  margin-top: -20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.category-filter {
+  display: flex;
+  gap: 12px;
+}
+.content-card {
+  background-color: #000000;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 16px 0px 16px 0;
+  background-color: #000000;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+
+  margin-bottom: 0px;
+  margin-top: 0;
+}
+
+.card-description {
+  font-size: 14px;
+  word-break: keep-all;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 12px;
+  margin-top: 4px;
+}
+
+.card-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  color: #b1b1b1;
+  background-color: #000000;
+  border: 1px solid #6e6e6e;
+  padding: 4px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+@media screen and (max-width: 1024px) {
+  .content-wrapper {
+    padding: 0;
+  }
+
+  .content-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    box-decoration-break: clone;
+    background-color: #01daa2;
+  }
+  .content-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 8px;
+  }
+  .category-filter {
+    display: flex;
+    gap: 8px; /* gap 줄임 */
+  }
+
+  .category-filter button {
+    font-size: 12px; /* 버튼 폰트 크기 감소 */
+    padding: 4px 12px; /* 버튼 패딩 감소 */
+  }
+
+  .category-button {
+    padding: 6px 12px; /* 버튼 패딩 감소 */
+    font-size: 12px; /* 폰트 크기 감소 */
+    border-radius: 16px; /* 둥글기 약간 감소 */
+  }
+  .card-image {
+    height: 160px; /* 이미지 높이 감소 */
+  }
+
+  .card-info {
+    padding: 12px 12px 12px 0; /* 패딩 감소 */
+  }
+
+  .card-title {
+    font-size: 16px; /* 제목 폰트 크기 감소 */
+  }
+
+  .card-description {
+    font-size: 13px; /* 설명 폰트 크기 감소 */
+    margin-bottom: 8px;
+  }
+
+  .tag {
+    font-size: 11px; /* 태그 폰트 크기 감소 */
+    padding: 3px 6px; /* 태그 패딩 감소 */
+  }
+
+  .section-header {
+    margin-top: -12px;
+    margin-bottom: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 6px;
+  }
+  .section-header {
+    margin-top: -12px;
+    margin-bottom: 12px;
+  }
+  .category-filter {
+    gap: 6px;
+    white-space: nowrap; /* 줄바꿈 방지 */
+  }
+  .category-filter button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .card-image {
+    height: 200px;
+  }
+  .content-title {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #01daa2;
+    white-space: nowrap; /* 줄바꿈 방지 */
+  }
+}
+/* 기존 스타일 유지하고 드롭다운 관련 스타일만 추가 */
+
+.category-dropdown {
+  display: none; /* 기본적으로 숨김 */
+  position: relative;
+}
+
+.selected-category {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.selected-category.active {
+  border: 1px solid #fff;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 8px;
+  z-index: 1000;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 정렬 */
+  gap: 4px; /* 아이템 간 간격 */
+}
+
+.dropdown-item {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-item.active {
+  background-color: #01daa2;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .category-filter .category-button {
+    display: none; /* 기존 버튼 숨김 */
+  }
+
+  .category-dropdown {
+    display: block; /* 드롭다운 표시 */
+  }
+}
+/* PC에서는 모바일용 카테고리 필터 숨기기 */
+@media screen and (min-width: 1025px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* 모바일에서만 카테고리 필터 표시 */
+@media screen and (max-width: 1024px) {
+  .mobile-only {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /2024/
+  
+  # video, team 등의 경로를 multi/index.html로 리다이렉트
+  RewriteCond %{REQUEST_URI} ^/2024/(video|team|gallery|department|location)
+  RewriteRule .* multi/index.html [L]
+  
+  # multi 폴더의 요청 처리
+  RewriteCond %{REQUEST_URI} ^/2024/multi/
+  RewriteRule ^multi/(.*)$ multi/index.html [L]
+  
+  # 나머지는 기본 index.html로
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.*)$ index.html [L]
+</IfModule>

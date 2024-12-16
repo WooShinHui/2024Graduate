@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/s201910930/timer/static/css/main.10e2dcce.css",
+    "main.js": "/s201910930/timer/static/js/main.3ebfc96f.js",
+    "static/js/453.67bc05c0.chunk.js": "/s201910930/timer/static/js/453.67bc05c0.chunk.js",
+    "static/media/Paperlogy-4Regular.ttf": "/s201910930/timer/static/media/Paperlogy-4Regular.6b05fa2e19935da1fb31.ttf",
+    "static/media/Paperlogy-6SemiBold.ttf": "/s201910930/timer/static/media/Paperlogy-6SemiBold.50a5ddcf4f53ec2f87bd.ttf",
+    "static/media/logo.png": "/s201910930/timer/static/media/logo.9449b60511260d154af3.png",
+    "static/media/PressioTEST-No.35.otf": "/s201910930/timer/static/media/PressioTEST-No.35.ad6f2b730463da8057e7.otf",
+    "index.html": "/s201910930/timer/index.html",
+    "main.10e2dcce.css.map": "/s201910930/timer/static/css/main.10e2dcce.css.map",
+    "main.3ebfc96f.js.map": "/s201910930/timer/static/js/main.3ebfc96f.js.map",
+    "453.67bc05c0.chunk.js.map": "/s201910930/timer/static/js/453.67bc05c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10e2dcce.css",
+    "static/js/main.3ebfc96f.js"
+  ]
+}

@@ -1,0 +1,144 @@
+.sections-wrapper {
+  width: 100%;
+  background-color: #000;
+}
+
+.location-banner {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+}
+
+.location-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block; /* 이미지 하단의 여백 제거 */
+}
+.location-container {
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+  background-color: #000;
+}
+
+.location-header {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.location-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(
+    to bottom,
+    rgb(215, 255, 243) 0%,
+    #80ecd1 20%,
+    #01daa2 100%
+  );
+  opacity: 0.6;
+  border-radius: 50%;
+  left: -16px;
+  top: 6px;
+  z-index: 0;
+}
+
+.location-title {
+  position: relative;
+  z-index: 1;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.underline {
+  width: 100px;
+  height: 1px;
+  background-color: #01daa2;
+  margin-top: 8px;
+}
+
+.location-content {
+  display: flex;
+  gap: 40px;
+}
+
+.location-info {
+  flex: 1;
+}
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.info-item span {
+  font-weight: bold;
+  margin-right: 16px;
+  min-width: 160px; /* span 요소들의 너비를 일정하게 유지 */
+  white-space: nowrap;
+}
+.address-container {
+  word-break: keep-all; /* 단어 단위로 줄바꿈 */
+  white-space: normal; /* 자동 줄바꿈 허용 */
+}
+
+.address-container p {
+  margin: 5px 0;
+  line-height: 1.4;
+}
+.info-item p {
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.map-container {
+  flex: 1;
+  min-height: 300px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+/* 모바일 반응형 */
+@media screen and (max-width: 768px) {
+  .location-content {
+    flex-direction: column;
+  }
+
+  .map-container {
+    min-height: 250px;
+  }
+  .address-container {
+    font-size: 14px; /* 모바일에서 폰트 크기 줄임 */
+    padding-right: 10px; /* 오른쪽 여백 추가 */
+  }
+
+  .info-item {
+    flex-direction: column; /* 레이블과 내용을 세로로 배치 */
+    align-items: flex-start; /* 왼쪽 정렬 */
+    gap: 8px; /* 간격 추가 */
+  }
+
+  .info-item span {
+    margin-right: 0; /* 레이블 오른쪽 마진 제거 */
+  }
+}
+
+@media (max-width: 480px) {
+  .address-container {
+    font-size: 13px; /* 더 작은 화면에서 폰트 크기 더 줄임 */
+  }
+}
